@@ -1,6 +1,7 @@
 package com.jbs.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.jbs.backend.enums.Category;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -34,10 +35,11 @@ public class Course {
     private String name ;
 
     @NotNull
-    @Length(max = 10)
-    @Pattern(regexp = "Back-end|Front-end")
+    //@Length(max = 10)
+   // @Pattern(regexp = "Back-end|Front-end")
     @Column(length = 20, nullable = false)
-    private String category ;
+    @Enumerated(EnumType.STRING)
+    private Category category ;
 
     @NotNull
     @Length(max = 10)

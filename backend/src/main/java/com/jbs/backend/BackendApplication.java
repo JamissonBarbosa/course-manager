@@ -1,5 +1,6 @@
 package com.jbs.backend;
 
+import com.jbs.backend.enums.Category;
 import com.jbs.backend.model.Course;
 import com.jbs.backend.repository.CourseRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -20,7 +21,7 @@ public class BackendApplication {
 
 			Course c = new Course();
 			c.setName("Angular");
-			c.setCategory("Front-end");
+			c.setCategory(Category.FRONTEND);
 
 			courseRepository.save(c);
 		};
