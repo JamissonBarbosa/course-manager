@@ -1,22 +1,21 @@
 package com.jbs.backend.enums;
 
 public enum Category {
-    BACKEND("Back-end"), FRONTEND("Front-end");
+    BACK_END("Back-end"), FRONT_END("Front-end");
 
-    private String value;
+    private final String value;
 
-    private Category(String value){
+    private Category(String value) {
         this.value = value;
     }
 
-    public  String getValue(){
+    public String getValue() {
         return value;
     }
 
-    //toString
     @Override
     public String toString() {
         return value;
     }
-    
+
 }
